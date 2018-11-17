@@ -12,3 +12,6 @@ coroutine_transfer:
 	stmia r1!, {r4-r11,sp,lr}
 	ldmia r0!, {r4-r11,sp,pc}
 	bx lr
+
+.globl coroutine_trampoline
+	pop {r2,pc}
